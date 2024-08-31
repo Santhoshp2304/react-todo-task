@@ -26,14 +26,13 @@ function App() {
   ]);
   const [tempTodos] = useState(todos);
   const onFinish = (values) => {
-    // console.log("Success:", values);
     todos.push({
       ...values,
       id: todos.length + 1,
       status: "Not completed",
     });
     setTodos([...todos]);
-    console.log(todos);
+
     message.success("Added Successfully !");
   };
 
